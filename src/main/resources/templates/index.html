@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Course Registration</title>
+</head>
+<body>
+
+<h2>Add Course</h2>
+
+<form action="/add" method="post">
+    <input type="text" name="name" placeholder="Enter Course Name" required>
+    <button type="submit">Add</button>
+</form>
+
+<h3>Course List</h3>
+
+<ul>
+    <li th:each="c : ${courses}" th:text="${c.name}"></li>
+</ul>
+
+</body>
+</html>
